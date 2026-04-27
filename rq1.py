@@ -146,6 +146,49 @@ def plot_lines_changed_violin():
     return avg
 
 
+def plot_task_tries_violin():
+    task_path = Path("tasks.json")  # your JSON from above
+
+    with open(task_path, "r") as f:
+        data = json.load(f)
+
+    tries_per_task = []
+
+    for participant, tasks in data.items():
+        for task in tasks:
+            tries_per_task.append(task["number of tries"])
+
+    avg = sum(tries_per_task) / len(tries_per_task)
+
+    fig, ax = plt.subplots(figsize=(6, 6))
+
+    ax.violinplot(tries_per_task, showmeans=False, showmedians=True)
+
+    ax.scatter(
+        [1] * len(tries_per_task),
+        tries_per_task,
+        alpha=0.8
+    )
+
+    ax.axhline(avg, linestyle="--", linewidth=2)
+    ax.text(1.02, avg + 0.15, f"Mean = {avg:.2f}", va="center")
+
+    ax.set_ylabel("Number of Prompts Needed")
+    ax.set_xticks([1])
+    ax.set_xticklabels(["All Tasks"])
+    ax.set_title("Prompts Needed per Completed Task")
+
+    ax.set_ylim(0, max(tries_per_task) + 1)
+    ax.set_yticks(range(1, max(tries_per_task) + 1))
+
+    fig.tight_layout()
+    Path("figures").mkdir(exist_ok=True)
+    fig.savefig("figures/task_tries_violin.pdf", bbox_inches="tight")
+    plt.show()
+
+    return tries_per_task
+
+
 if __name__ == "__main__":
-    plot1 = plot_success_rate_violin()
+    plot1 = plot_task_tries_violin()
     print(plot1)

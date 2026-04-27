@@ -87,6 +87,85 @@ def plot_resets_violin():
 
     return avg
 
+def plot_avg_lines_changed_per_category():
+    category_totals = {
+        "Aesthetic": 0,
+        "Layout": 0,
+        "Content": 0,
+        "Workflow": 0,
+        "Defaults": 0,
+        "Misc": 0,
+    }
+
+    category_counts = {
+        "Aesthetic": 0,
+        "Layout": 0,
+        "Content": 0,
+        "Workflow": 0,
+        "Defaults": 0,
+        "Misc": 0,
+    }
+
+    # Traverse Participants/participant X/history.json
+    for participant_folder in Path("Participants").iterdir():
+        if not participant_folder.is_dir():
+            continue
+
+        history_path = participant_folder / "history.json"
+
+        with open(history_path, "r") as f:
+            data = json.load(f)
+
+        for entry in data["entries"]:
+            lines_changed = entry["linesChanged"]
+
+            for category in entry["category"]:
+                category_totals[category] += lines_changed
+                category_counts[category] += 1
+
+    # Compute averages
+    category_avgs = {}
+    for category in category_totals:
+        if category_counts[category] > 0:
+            category_avgs[category] = (
+                category_totals[category] / category_counts[category]
+            )
+        else:
+            category_avgs[category] = 0
+
+    categories = list(category_avgs.keys())
+    averages = list(category_avgs.values())
+
+    print(category_avgs)
+
+    fig, ax = plt.subplots(figsize=(9, 6))
+
+    bars = ax.bar(categories, averages, color="steelblue")
+
+    ax.set_ylabel("Average Lines of Code Changed")
+    ax.set_title("Average Lines Changed per Customization Category")
+
+    ax.set_ylim(0, max(averages) + 50)
+    ax.set_yticks(range(0, int(max(averages)) + 51, 25))
+
+    # Labels above bars
+    for bar in bars:
+        height = bar.get_height()
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            height + 2,
+            f"{height:.1f}",
+            ha="center",
+            va="bottom"
+        )
+
+    fig.tight_layout()
+    Path("figures").mkdir(exist_ok=True)
+    fig.savefig("figures/avg_lines_per_category.pdf", bbox_inches="tight")
+    plt.show()
+
+    return category_avgs
+
 if __name__ == "__main__":
-    plot1 = plot_resets_violin()
+    plot1 = plot_avg_lines_changed_per_category()
     print(plot1)
