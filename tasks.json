@@ -1,95 +1,95 @@
 {
   "P1": [
-    { "task": "eliminate scrolling", "number of tries": 1 },
-    { "task": "change text to black", "number of tries": 2 },
-    { "task": "change color theme/background colors", "number of tries": 5 },
-    { "task": "fix spelling mistakes", "number of tries": 3 },
-    { "task": "restore headings", "number of tries": 1 },
-    { "task": "remove priority question", "number of tries": 1 },
-    { "task": "auto-generate keywords from title/description", "number of tries": 4 },
-    { "task": "remove default title text", "number of tries": 1 },
-    { "task": "limit keywords to 3", "number of tries": 1 },
-    { "task": "change font to Times New Roman", "number of tries": 1 }
+    { "task": "eliminate scrolling", "number of tries": 1, "category": ["Layout"] },
+    { "task": "change text to black", "number of tries": 2, "category": ["Aesthetic"] },
+    { "task": "change color theme/background colors", "number of tries": 5, "category": ["Aesthetic"] },
+    { "task": "fix spelling mistakes", "number of tries": 3, "category": ["Content"] },
+    { "task": "restore headings", "number of tries": 1, "category": ["Layout"] },
+    { "task": "remove priority question", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "auto-generate keywords from title/description", "number of tries": 4, "category": ["Workflow"] },
+    { "task": "remove default title text", "number of tries": 1, "category": ["Defaults"] },
+    { "task": "limit keywords to 3", "number of tries": 1, "category": ["Defaults"] },
+    { "task": "change font to Times New Roman", "number of tries": 1, "category": ["Aesthetic"] }
   ],
 
   "P2": [
-    { "task": "change colors", "number of tries": 3 },
-    { "task": "fix spelling mistakes", "number of tries": 2 },
-    { "task": "fix scrolling / improve add card size", "number of tries": 3 },
-    { "task": "make cards bigger", "number of tries": 1 },
-    { "task": "set default title and priority", "number of tries": 1 },
-    { "task": "change points to fraction", "number of tries": 1 },
-    { "task": "move titles outside red boxes", "number of tries": 3 },
-    { "task": "change To Do text to Do Do", "number of tries": 1 }
+    { "task": "change colors", "number of tries": 3, "category": ["Aesthetic"] },
+    { "task": "fix spelling mistakes", "number of tries": 2, "category": ["Content"] },
+    { "task": "fix scrolling / improve add card size", "number of tries": 3, "category": ["Layout"] },
+    { "task": "make cards bigger", "number of tries": 1, "category": ["Layout"] },
+    { "task": "set default title and priority", "number of tries": 1, "category": ["Defaults"] },
+    { "task": "change points to fraction", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "move titles outside red boxes", "number of tries": 3, "category": ["Layout"] },
+    { "task": "change To Do text to Do Do", "number of tries": 1, "category": ["Content"] }
   ],
 
   "P3": [
-    { "task": "change text color to black", "number of tries": 1 },
-    { "task": "apply grayscale theme", "number of tries": 1 },
-    { "task": "reduce scrolling in add task area", "number of tries": 5 },
-    { "task": "set default title", "number of tries": 1 },
-    { "task": "set default priority/points/keyword", "number of tries": 1 },
-    { "task": "improve overall appearance", "number of tries": 1 },
-    { "task": "make save button green", "number of tries": 1 },
-    { "task": "auto-sort by priority", "number of tries": 1 },
-    { "task": "keep priority editable", "number of tries": 1 }
+    { "task": "change text color to black", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "apply grayscale theme", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "reduce scrolling in add task area", "number of tries": 5, "category": ["Layout"] },
+    { "task": "set default title", "number of tries": 1, "category": ["Defaults"] },
+    { "task": "set default priority/points/keyword", "number of tries": 1, "category": ["Defaults"] },
+    { "task": "improve overall appearance", "number of tries": 1, "category": ["Aesthetic", "Layout"] },
+    { "task": "make save button green", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "auto-sort by priority", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "keep priority editable", "number of tries": 1, "category": ["Workflow"] }
   ],
 
   "P4": [
-    { "task": "change background to dark/black", "number of tries": 2 },
-    { "task": "change text color to blue", "number of tries": 2 },
-    { "task": "set task creation defaults", "number of tries": 2 },
-    { "task": "reduce scrolling / improve navigability", "number of tries": 2 },
-    { "task": "make rainbow theme", "number of tries": 1 },
-    { "task": "break the site / bypass safeguards", "number of tries": 3 }
+    { "task": "change background to dark/black", "number of tries": 2, "category": ["Aesthetic"] },
+    { "task": "change text color to blue", "number of tries": 2, "category": ["Aesthetic"] },
+    { "task": "set task creation defaults", "number of tries": 2, "category": ["Defaults", "Workflow"] },
+    { "task": "reduce scrolling / improve navigability", "number of tries": 2, "category": ["Layout", "Aesthetic"] },
+    { "task": "make rainbow theme", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "break the site / bypass safeguards", "number of tries": 3, "category": ["Misc"] }
   ],
 
   "P5": [
-    { "task": "change tasks/theme to pink", "number of tries": 2 },
-    { "task": "add anteater to background", "number of tries": 1 },
-    { "task": "rename board title", "number of tries": 1 },
-    { "task": "replace points with due date", "number of tries": 1 },
-    { "task": "organize tasks by priority", "number of tries": 1 }
+    { "task": "change tasks/theme to pink", "number of tries": 2, "category": ["Aesthetic"] },
+    { "task": "add anteater to background", "number of tries": 1, "category": ["Misc"] },
+    { "task": "rename board title", "number of tries": 1, "category": ["Content"] },
+    { "task": "replace points with due date", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "organize tasks by priority", "number of tries": 1, "category": ["Workflow"] }
   ],
 
   "P6": [
-    { "task": "change all text to black", "number of tries": 3 },
-    { "task": "rename done column to Finished", "number of tries": 2 },
-    { "task": "change column colors", "number of tries": 2 },
-    { "task": "fix layout / fit on screen", "number of tries": 4 },
-    { "task": "undo recent change", "number of tries": 1 },
-    { "task": "color cards by priority", "number of tries": 6 },
-    { "task": "set default title", "number of tries": 1 },
-    { "task": "delete points input", "number of tries": 1 },
-    { "task": "add move-to-column buttons", "number of tries": 2 },
-    { "task": "auto-delete finished cards after 48h", "number of tries": 1 },
-    { "task": "sort tasks by priority", "number of tries": 1 },
-    { "task": "add due date input", "number of tries": 1 },
-    { "task": "highlight cards by clicked keyword", "number of tries": 1 },
-    { "task": "show description in main view", "number of tries": 1 }
+    { "task": "change all text to black", "number of tries": 3, "category": ["Aesthetic"] },
+    { "task": "rename done column to Finished", "number of tries": 2, "category": ["Content"] },
+    { "task": "change column colors", "number of tries": 2, "category": ["Aesthetic", "Workflow"] },
+    { "task": "fix layout / fit on screen", "number of tries": 4, "category": ["Layout"] },
+    { "task": "undo recent change", "number of tries": 1, "category": ["Misc"] },
+    { "task": "color cards by priority", "number of tries": 6, "category": ["Aesthetic", "Workflow"] },
+    { "task": "set default title", "number of tries": 1, "category": ["Defaults"] },
+    { "task": "delete points input", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "add move-to-column buttons", "number of tries": 2, "category": ["Workflow"] },
+    { "task": "auto-delete finished cards after 48h", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "sort tasks by priority", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "add due date input", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "highlight cards by clicked keyword", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "show description in main view", "number of tries": 1, "category": ["Layout"] }
   ],
 
   "P7": [
-    { "task": "make darker/less scary theme", "number of tries": 1 },
-    { "task": "remove placeholder text / clarify wording", "number of tries": 1 },
-    { "task": "personalize with name and pastel theme", "number of tries": 1 },
-    { "task": "make cards heart-shaped", "number of tries": 1 },
-    { "task": "add flowers", "number of tries": 2 },
-    { "task": "add bugs/insects", "number of tries": 2 }
+    { "task": "make darker/less scary theme", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "remove placeholder text / clarify wording", "number of tries": 1, "category": ["Defaults", "Content"] },
+    { "task": "personalize with name and pastel theme", "number of tries": 1, "category": ["Content", "Aesthetic"] },
+    { "task": "make cards heart-shaped", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "add flowers", "number of tries": 2, "category": ["Misc", "Aesthetic"] },
+    { "task": "add bugs/insects", "number of tries": 2, "category": ["Misc", "Aesthetic"] }
   ],
 
   "P8": [
-    { "task": "make page blue/black", "number of tries": 1 },
-    { "task": "make all text black Arial font", "number of tries": 1 },
-    { "task": "add delete column button", "number of tries": 1 },
-    { "task": "remove completed cards", "number of tries": 1 },
-    { "task": "add calendar due dates", "number of tries": 1 },
-    { "task": "add cat animation", "number of tries": 1 }
+    { "task": "make page blue/black", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "make all text black Arial font", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "add delete column button", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "remove completed cards", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "add calendar due dates", "number of tries": 1, "category": ["Workflow"] },
+    { "task": "add cat animation", "number of tries": 1, "category": ["Misc"] }
   ],
 
   "P9": [
-    { "task": "make colors pastel", "number of tries": 1 },
-    { "task": "make cards draggable between columns", "number of tries": 4 },
-    { "task": "color cards by keyword/title rules", "number of tries": 2 }
+    { "task": "make colors pastel", "number of tries": 1, "category": ["Aesthetic"] },
+    { "task": "make cards draggable between columns", "number of tries": 4, "category": ["Workflow"] },
+    { "task": "color cards by keyword/title rules", "number of tries": 2, "category": ["Aesthetic", "Workflow"] }
   ]
 }

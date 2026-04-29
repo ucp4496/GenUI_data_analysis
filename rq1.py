@@ -1,6 +1,7 @@
 from pathlib import Path
 import json
 import matplotlib.pyplot as plt
+import statistics
 
 def plot_success_rate_violin():
     errors_per_participant = [0,0,1,3,1,2,0,1,3]
@@ -188,7 +189,52 @@ def plot_task_tries_violin():
 
     return tries_per_task
 
+def category_prompt_stats_table():
+    json_path = Path("tasks.json")
+
+    with open(json_path, "r") as f:
+        data = json.load(f)
+
+    categories = {
+        "Aesthetic": [],
+        "Layout": [],
+        "Content": [],
+        "Workflow": [],
+        "Defaults": [],
+        "Misc": []
+    }
+
+    # Collect tries into each category
+    for participant, tasks in data.items():
+        for task in tasks:
+            tries = task["number of tries"]
+
+            for category in task["category"]:
+                categories[category].append(tries)
+
+    # Print markdown table
+    print("| Category | Avg. Prompts Required | Min | Max | Median |")
+    print("|---|---:|---:|---:|---:|")
+
+    for category, values in categories.items():
+        if len(values) == 0:
+            avg = min_v = max_v = median = 0
+        else:
+            avg = sum(values) / len(values)
+            min_v = min(values)
+            max_v = max(values)
+            median = statistics.median(values)
+
+        print(
+            f"| {category.lower()} "
+            f"| {avg:.2f} "
+            f"| {min_v} "
+            f"| {max_v} "
+            f"| {median:.2f} |"
+        )
+
+    return categories
+
 
 if __name__ == "__main__":
-    plot1 = plot_task_tries_violin()
-    print(plot1)
+    plot1 = category_prompt_stats_table()
